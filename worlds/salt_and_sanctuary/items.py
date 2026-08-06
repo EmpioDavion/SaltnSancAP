@@ -91,11 +91,11 @@ armor_heavy = to_item_data_dict(ArmorHeavy.__dict__, "Armor Heavy", ItemClassifi
 spells = to_item_data_dict(Spells.__dict__, "Spells", ItemClassification.useful, 28000)
 prayers = to_item_data_dict(Prayers.__dict__, "Prayers", ItemClassification.useful, 29000)
 incantations = to_item_data_dict(Incantations.__dict__, "Incantations", ItemClassification.useful, 30000)
-brands = to_item_data_dict(Incantations.__dict__, "Brands", ItemClassification.progression, 30000)
-filler = to_item_data_dict(Filler.__dict__, "Filler", ItemClassification.filler, 31000)
-levers = to_item_data_dict(Incantations.__dict__, "Incantations", ItemClassification.progression, 32000)
-lifts = to_item_data_dict(Incantations.__dict__, "Incantations", ItemClassification.progression, 33000)
-traps = to_item_data_dict(Traps.__dict__, "Traps", ItemClassification.trap, 34000)
+brands = to_item_data_dict(Incantations.__dict__, "Brands", ItemClassification.progression, 31000)
+filler = to_item_data_dict(Filler.__dict__, "Filler", ItemClassification.filler, 32000)
+levers = to_item_data_dict(Incantations.__dict__, "Incantations", ItemClassification.progression, 33000)
+lifts = to_item_data_dict(Incantations.__dict__, "Incantations", ItemClassification.progression, 34000)
+traps = to_item_data_dict(Traps.__dict__, "Traps", ItemClassification.trap, 35000)
 
 items = (
     consumables_basic |
@@ -183,3 +183,8 @@ location_name_to_id: dict[str, int] = {name: item_table[data.name].code for name
 item_name_groups: dict[str, set[str]] = {
     group: set(item_names) for group, item_names in itertools.groupby(item_table, lambda item: item_table[item].group)
 }
+
+exportItems = False
+
+if exportItems:
+    json
